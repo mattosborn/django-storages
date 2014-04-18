@@ -249,7 +249,7 @@ class PreloadingS3Storage(S3Storage):
 
 class S3StorageFile(File):
     def __init__(self, name, storage, mode):
-        self._name = name
+        self._name = self.name = name
         self._storage = storage
         self._mode = mode
         self._is_dirty = False
